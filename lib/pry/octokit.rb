@@ -1,7 +1,12 @@
 require "pry/octokit/version"
+require 'pry'
+require 'octokit'
 
 module Pry
   module Octokit
-    # Your code goes here...
   end
+end
+
+Pry.commands.block_command(/^\/(.+)/) do |path|
+
 end
