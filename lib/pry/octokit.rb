@@ -15,9 +15,9 @@ class Pry
   end
 end
 
-Pry.commands.block_command(/^\/(.+)/) do |path|
+Pry.commands.block_command(%r!^gh/(.+)!) do |path|
   path = eval %Q!"#{path}"!
   resp = Pry::Octokit.client.get path
-  _pry_.show_result resp
   _pry_.last_result = resp
+  _pry_.show_result resp
 end
