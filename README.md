@@ -1,8 +1,6 @@
-# Pry::Octokit
+# pry-octokit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pry/octokit`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Call GitHub API from Pry.
 
 ## Installation
 
@@ -22,7 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can use `gh/` command to call GitHub API. It receives a path of API URL.
+
+```ruby
+[1] pry(main)> gh/user
+=> {:login=>"pocke",
+ :id=>4361134,
+ :avatar_url=>"https://avatars0.githubusercontent.com/u/4361134?v=4",
+ :gravatar_id=>"",
+ :url=>"https://api.github.com/users/pocke",
+ :html_url=>"https://github.com/pocke",
+ :followers_url=>"https://api.github.com/users/pocke/followers",
+ (snip)
+
+[2] pry(main)> _ # You can access the last response from the `_` variable.
+ (snip)
+```
 
 ## Development
 
